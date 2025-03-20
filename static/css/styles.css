@@ -1,0 +1,43 @@
+.circular-image {
+    height:200px;
+    border-radius:50%;
+}
+
+
+.color-font{
+    color:red;
+}
+
+
+.text-style{
+    color:green; font-style:italic; text-decoration:underline
+}
+
+
+.card {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadows to create the "card" effect */ [1]
+  transition: 0.3s; /* Add transition for smooth effect */ [1]
+  border-radius: 10px; /* 5px rounded corners */ [1]
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+
+.center-image {
+    display: block; /* Make the image a block element */
+    margin-left: auto; /* Automatically adjust left margin */
+    margin-right: auto; /* Automatically adjust right margin */
+    width: 50%; /* Optional: set a width for the image */
+    border-radius: 100px
+}
+
+
+

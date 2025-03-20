@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+
+<div class="container">
+    <img src="{{url_for('static', filename='images/write_normal.png')}}" alt="writing_normal_image" class="center-image">
+    <div style="margin-top:20px">
+    <h1 class="display-5 text-body-emphasis bold fw-bold" style="text-align:center">This is <span class="text-style">normal writing</span> page.</h1>
+    <br>
+    <div class="card">
+        <textarea placeholder="enter the text here." rows="8" cols="170"></textarea>
+    </div>
+
+    <div style="text-align:center">
+    <a href="{{url_for('writing')}}" class="btn btn-warning" >Done</a>
+    <a href="{{url_for('home')}}" class="btn btn-success" >Home</a>
+    </div>
+    </div>
+
+    <div>
+        <a href="{{url_for('danger_writing')}}" class="btn btn-danger">Want to try danger mode</a>
+    </div>
+
+</div>
+
+<div style="margin-top:200px">
+{% include 'footer.html' %}
+</div>

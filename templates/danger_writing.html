@@ -1,0 +1,42 @@
+{% include 'header.html' %}
+
+<div class="container">
+    <img src="{{url_for('static', filename='images/carefull.png')}}" alt="writing_normal_image" class="center-image">
+    <div style="margin-top:20px">
+        <h1 class="display-5 text-body-emphasis bold fw-bold" style="text-align:center">This is <span style="color:red">danger writing</span> page.</h1>
+        <p style="text-align:center">In this text box if you stop typing, all the words you have typed will be <span style="color:red"> gone or deleted </span></p>
+        <br>
+        <div class="card">
+            <textarea placeholder="enter the text here." rows="8" cols="170" id="MyTextArea"></textarea>
+        </div>
+        <div style="text-align:center">
+        <a href="{{url_for('home')}}" class="btn btn-success" >Home</a>
+        </div>
+        <div>
+            <a href="{{url_for('writing')}}" class="btn btn-info">Want to try normal mode</a>
+        </div>
+    </div>
+
+</div>
+<div style="margin-top:200px">
+{% include 'footer.html' %}
+</div>
+
+<script>
+    const textarea = document.getElementById('MyTextArea');
+    let timer;
+    const delay = 3000;
+
+    textarea.addEventListener('input', function(){
+        resetTimer();
+    });
+
+    function deleteText(){
+        textarea.value = ''
+    };
+
+    function resetTimer(){
+      clearTimeout(timer);
+      timer = setTimeout(deleteText, delay);
+    };
+</script>
